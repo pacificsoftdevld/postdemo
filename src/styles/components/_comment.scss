@@ -1,0 +1,68 @@
+.CommentComponent {
+	$width_avatar: 3rem;
+	
+	padding: 0.5rem 0;
+	color: #8a8a8a;
+	@include clearfix();
+
+	&__avatar {
+		width: $width_avatar;
+		float: left;
+		img {
+			width: 100%;
+			border-radius: 100%;
+		}
+	}
+
+	&__detail {
+		width: calc(100% - #{$width_avatar});
+		float: left;
+		padding: 0.2rem 1rem;
+	}
+
+	&__head {
+		width: 100%;
+		margin: 0 0 10px;
+		@include clearfix();
+		&>* {
+			float: left;
+			margin-right: 8px;
+		}
+	}
+
+	&__content {
+		p {
+			margin: 0 0 5px;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0 0 8px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__footer {
+		width: 100%;
+		margin: 0 0 10px;
+		@include clearfix();
+		&>* {
+			float: left;
+			margin-right: 8px;
+			padding: 5px 0;
+		}
+	}
+
+	&__reply {
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.Comment {
+	&__child {
+		padding-left: 4rem;
+	}
+}
